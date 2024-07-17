@@ -1,47 +1,47 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 
+type TimerType = "countup" | "countdown";
+
 export type UseTimerOptions = {
     timeout?: number;
-    type?: "countup" | "countdown";
+    type?: TimerType;
     isCounting?: boolean;
     onTimeOut?: () => void;
 };
 
-export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, onTimeOut }: UseTimerOptions) => {
-    const [{ seconds, minutes, timeLeft, timeLeftPercents }, setTimer] = useState({
-        seconds: 0,
-        minutes: 0,
-        timeLeft: 0,
-        timeLeftPercents: 0
-    });
+const calculateTimerState = (type: TimerType, startTime: number | null, timeout: number) => {
+    const timeSpent = Math.round((Date.now() - (startTime || Date.now())) / 1000);
+    if (type === "countup") {
+        return {
+            seconds: timeSpent % 60,
+            minutes: Math.floor(timeSpent / 60),
+            timeLeft: 0,
+            timeLeftPercents: 0
+        };
+    }
 
-    const [startTime, setStartTime] = useState<number | null>(null);
+    const currentTimeLeft = Math.max(timeout - timeSpent, 0);
+
+    return {
+        seconds: currentTimeLeft % 60,
+        minutes: Math.floor(currentTimeLeft / 60),
+        timeLeft: currentTimeLeft,
+        timeLeftPercents: (currentTimeLeft / timeout) * 100
+    };
+};
+
+export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, onTimeOut }: UseTimerOptions) => {
+    const [{ seconds, minutes, timeLeft, timeLeftPercents }, setTimer] = useState(
+        calculateTimerState(type, null, timeout)
+    );
+
+    const [startTime, setStartTime] = useState<number | null>(isCounting ? Date.now() : null);
     const [endTime, setEndTime] = useState<number | null>(null);
     const [localIsCounting, setIsCounting] = useState(isCounting);
 
     const computeTimer = useCallback(() => {
-        const timeSpent = localIsCounting ? Math.round((Date.now() - (startTime || 0)) / 1000) : 0;
-        if (type === "countup") {
-            setTimer({
-                seconds: timeSpent % 60,
-                minutes: Math.floor(timeSpent / 60),
-                timeLeft: 0,
-                timeLeftPercents: 0
-            });
-        } else {
-            const currentTimeLeft = Math.max(timeout - timeSpent, 0);
-            setTimer({
-                seconds: currentTimeLeft % 60,
-                minutes: Math.floor(currentTimeLeft / 60),
-                timeLeft: currentTimeLeft,
-                timeLeftPercents: (currentTimeLeft / timeout) * 100
-            });
-        }
+        setTimer(calculateTimerState(type, startTime, timeout));
     }, [startTime, timeout, type, setTimer, localIsCounting]);
-
-    useEffect(() => {
-        computeTimer();
-    }, [timeout, type]);
 
     useEffect(() => {
         setIsCounting(isCounting);
@@ -64,6 +64,10 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
             onTimeOut?.();
         }
     }, [timeLeft, type, onTimeOut]);
+
+    useEffect(() => {
+        computeTimer();
+    }, [computeTimer]);
 
     useEffect(() => {
         if (!localIsCounting) {
