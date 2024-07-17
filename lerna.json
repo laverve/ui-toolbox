@@ -1,4 +1,34 @@
 {
     "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+    "command": {
+        "version": {
+            "commitHooks": false,
+            "conventionalCommits": true,
+            "ignoreChanges": [
+                ".github/**/*",
+                ".husky/**/*",
+                ".vscode/**/*",
+                "apps/**/*",
+                ".envrc",
+                ".eslintrc.js",
+                ".gitignore",
+                ".npmrc",
+                ".nvmrc",
+                ".prettierrc.json",
+                "CHANGELOG.md",
+                "jest.config.ts",
+                "lerna.json",
+                "lint-stageed.config.json",
+                "package-lock.json",
+                "package.json",
+                "README.md",
+                "tsconfig.build.json",
+                "tsconfig.eslint.json",
+                "tsconfig.json",
+                "**/packages/**/*.spec.ts"
+            ],
+            "syncDistVersion": true
+        }
+    },
     "version": "2.0.1"
 }
