@@ -28,7 +28,7 @@
     ],
     "name": "@laverve/timer",
     "publishConfig": {
-        "access": "restricted"
+        "access": "public"
     },
     "repository": {
         "type": "git",
