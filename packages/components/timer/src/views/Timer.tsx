@@ -67,7 +67,11 @@ export const Timer = styled(UnstyledTimer)`
     display: grid;
     justify-content: center;
     align-self: center;
-    fontsize: 18;
-    fontweight: 700;
-    fontfamily: "ubuntu mono, consolas, monaco, monospace";
+    font-size: 18px;
+    font-weight: 700;
+    font-family:
+        ubuntu mono,
+        consolas,
+        monaco,
+        monospace;
 `;
