@@ -4,6 +4,7 @@
 
 import { describe, it, expect } from "@jest/globals";
 import { renderHook, cleanup } from "@testing-library/react";
+import { act } from "react";
 import { useTimer } from "./useTimer";
 
 const SYSTEM_TIME = new Date("2020-01-01T01:01:01.000Z");
@@ -65,7 +66,7 @@ describe("useTimer", () => {
                 }
             });
 
-            await jest.advanceTimersByTimeAsync(90000);
+            await act(() => jest.advanceTimersByTimeAsync(90000));
 
             expect(result.current).toEqual({
                 timeLeft: 0,
@@ -131,7 +132,7 @@ describe("useTimer", () => {
                 }
             });
 
-            await jest.advanceTimersByTimeAsync(50000);
+            await act(() => jest.advanceTimersByTimeAsync(50000));
 
             expect(mockOnTimeOut).not.toHaveBeenCalled();
 
@@ -158,7 +159,7 @@ describe("useTimer", () => {
                 }
             });
 
-            await jest.advanceTimersByTimeAsync(10000);
+            await act(() => jest.advanceTimersByTimeAsync(10000));
 
             expect(result.current).toEqual({
                 timeLeft: 0,

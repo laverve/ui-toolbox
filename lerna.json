@@ -5,17 +5,16 @@
             "commitHooks": false,
             "conventionalCommits": true,
             "ignoreChanges": [
-                ".github/**/*",
-                ".husky/**/*",
-                ".vscode/**/*",
-                "apps/**/*",
+                "**/.github/**",
+                "**/.husky/**",
+                "**/.vscode/**",
+                "**/apps/**",
                 ".envrc",
                 ".eslintrc.js",
                 ".gitignore",
                 ".npmrc",
                 ".nvmrc",
                 ".prettierrc.json",
-                "CHANGELOG.md",
                 "jest.config.ts",
                 "lerna.json",
                 "lint-stageed.config.json",
@@ -25,7 +24,7 @@
                 "tsconfig.build.json",
                 "tsconfig.eslint.json",
                 "tsconfig.json",
-                "**/packages/**/*.spec.ts"
+                "**/*.spec.ts"
             ],
             "syncDistVersion": true
         }
