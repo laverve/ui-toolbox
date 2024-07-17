@@ -45,10 +45,6 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
 
     useEffect(() => {
         setIsCounting(isCounting);
-        if (!isCounting) {
-            setStartTime(null);
-            setEndTime(null);
-        }
     }, [isCounting]);
 
     useEffect(() => {
