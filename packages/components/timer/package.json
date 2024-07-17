@@ -1,0 +1,45 @@
+{
+    "author": "Victor Pishuk <victor.pishuk@gmail.com>",
+    "bugs": {
+        "url": "https://github.com/laverve/ui-toolbox/issues"
+    },
+    "dependencies": {
+        "styled-components": "^6.1.11"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0"
+    },
+    "description": "This module offers a Timer component.",
+    "keywords": [
+        "components",
+        "react",
+        "timer"
+    ],
+    "license": "MIT",
+    "main": "./dist/src/index.js",
+    "types": "./dist/src/index.d.ts",
+    "files": [
+        "./dist/src/",
+        "./src/",
+        "package.json",
+        "package-lock.json",
+        "README.md",
+        "LICENSE"
+    ],
+    "name": "@laverve/timer",
+    "publishConfig": {
+        "access": "restricted"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/laverve/ui-toolbox/tree/main/packages/components/timer"
+    },
+    "scripts": {
+        "lint": "eslint --ext .js,.ts,.tsx,.json .",
+        "lint:staged": "lint-staged",
+        "test": "jest --passWithNoTests",
+        "build": "tsc"
+    },
+    "version": "1.0.10",
+    "webpack": "./src/index.ts"
+}

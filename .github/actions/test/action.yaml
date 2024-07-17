@@ -1,0 +1,7 @@
+name: 'Test'
+description: 'Tests all apps and components'
+runs:
+  using: "composite"
+  steps:
+    - run: npm run test
+      shell: bash

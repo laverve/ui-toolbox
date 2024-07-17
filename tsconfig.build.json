@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "baseUrl": ".",
+        "composite": true,
+        "declaration": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
+        "incremental": true,
+        "jsx": "react",
+        "module": "commonjs",
+        "outDir": "./dist/",
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "target": "ES2021"
+    },
+    "exclude": ["**/*.test.ts", "**/*.stub.ts", "node_modules", "dist"],
+    "references": [
+        {
+            "path": "./packages/components/timer"
+        }
+    ]
+}

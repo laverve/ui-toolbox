@@ -1,0 +1,69 @@
+{
+    "author": "Victor Pishuk <victor.pishuk@gmail.com>",
+    "bugs": {
+        "url": "https://github.com/laverve/fusion/issues"
+    },
+    "dependencies": {
+        "react": "^18.2.0"
+    },
+    "description": "This is a monorepo for all the products/components laverve is offering",
+    "devDependencies": {
+        "@laverve/test-utils": "1.0.10",
+        "@types/react": "^18.2.21",
+        "@types/uuid": "^9.0.4",
+        "@typescript-eslint/eslint-plugin": "^6.7.0",
+        "@typescript-eslint/parser": "^6.7.0",
+        "browserslist": "^4.22.1",
+        "copyfiles": "^2.4.1",
+        "eslint": "^8.49.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-airbnb-typescript": "^17.1.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-config-standard-with-typescript": "^39.0.0",
+        "eslint-plugin-i18next": "^6.0.3",
+        "eslint-plugin-import": "^2.28.1",
+        "eslint-plugin-jsonc": "^2.10.0",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
+        "eslint-plugin-n": "^16.1.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "eslint-plugin-promise": "^6.1.1",
+        "eslint-plugin-react": "^7.33.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.3",
+        "lerna": "^7.2.0",
+        "lint-staged": "^15.1.0",
+        "prettier": "^3.0.3",
+        "snapshot-diff": "^0.10.0",
+        "ts-node": "^10.9.1",
+        "tsconfig-paths-webpack-plugin": "^4.1.0",
+        "typescript": "^5.2.2",
+        "yargs": "^17.7.2"
+    },
+    "homepage": "https://github.com/vpishuk/laverve#readme",
+    "keywords": [
+        "games"
+    ],
+    "license": "UNLICENSED",
+    "main": "index.js",
+    "name": "laverve-monorepo",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/laverve/ui-toolbox.git"
+    },
+    "scripts": {
+        "build": "lerna run build",
+        "lint": "eslint --ext .js,.ts,.tsx,.json *.js lerna.json package.json tsconfig*.json *.ts && lerna run lint",
+        "lint:fix": "eslint --fix && lerna run lint -- --fix",
+        "lint:staged": "lint-staged && lerna run lint:staged --since=origin/main --concurrency=1",
+        "prepare": "husky install",
+        "publish": "lerna publish --no-private",
+        "storybook": "lerna run --scope @laverve/storybook start:dev --stream",
+        "test": "lerna run test",
+        "test:staged": "lerna run test --since=origin/main"
+    },
+    "version": "1.0.0",
+    "workspaces": [
+        "packages/components/*",
+        "apps/*"
+    ]
+}

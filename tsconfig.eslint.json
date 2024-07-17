@@ -1,0 +1,4 @@
+{
+    "extends": "./tsconfig.build.json",
+    "include": ["./.eslintrc.js", "./jest.config.ts", "./lint-staged.config.js", "./*.json"]
+}

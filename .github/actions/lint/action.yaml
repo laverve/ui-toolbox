@@ -1,0 +1,7 @@
+name: 'Lint'
+description: 'Linting all apps and components'
+runs:
+  using: "composite"
+  steps:
+    - run: npm run lint
+      shell: bash
