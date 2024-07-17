@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.6 (2024-07-17)
+
+### Bug Fixes
+
+-   do not reset timer start and end time when stopping counting ([f7e173c](https://github.com/laverve/ui-toolbox/commit/f7e173cf5326e3afb537014810fceff3465a44f8))
+
 ## 2.0.5 (2024-07-17)
 
 ### Bug Fixes
