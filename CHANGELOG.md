@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2.0.5 (2024-07-17)
+
+### Bug Fixes
+
+-   fixes styles ([c96b880](https://github.com/laverve/ui-toolbox/commit/c96b88020b9176af56f20681482c34fcf7689d54))
+
 ## 2.0.4 (2024-07-17)
 
 **Note:** Version bump only for package laverve-monorepo
