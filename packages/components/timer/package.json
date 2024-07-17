@@ -32,7 +32,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/laverve/ui-toolbox/tree/main/packages/components/timer"
+        "url": "https://github.com/laverve/ui-toolbox/"
     },
     "scripts": {
         "lint": "eslint --ext .js,.ts,.tsx,.json .",

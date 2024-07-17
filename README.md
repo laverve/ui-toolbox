@@ -8,7 +8,7 @@ It is designed to be used with [React](https://react.dev/) framework v18.2.0 or 
 
 # Components
 
-1. [Timer](hhttps://github.com/laverve/ui-toolbox/packages/components/timer/README.md)
+1. [Timer](https://github.com/laverve/ui-toolbox/tree/main/packages/components/timer)
 
 
 # Contribution guidelines

@@ -1,6 +1,6 @@
 # LaVerve Timer
 
-This package provides a component to display timer using [React](https://react.dev/) frameworks.
+This package provides a component to display timer using [React](https://react.dev/) framework.
 
 # Installation
 Run the following command to install timer in your repository:
@@ -15,7 +15,9 @@ npm i @laverve/timer
 
 ```
 import { Timer, useTimer } from "@laverve/timer"
-....
+
+// ....
+
 const { seconds, minutes, timeLeftPercents } = useTimer( {type: "countup", isCounting: true});
 <Timer seconds={seconds} minutes={minutes} />
 ```
@@ -24,7 +26,9 @@ const { seconds, minutes, timeLeftPercents } = useTimer( {type: "countup", isCou
 
 ```
 import { Timer, useTimer } from "@laverve/timer"
-....
+
+// ....
+
 const { seconds, minutes, timeLeftPercents } = useTimer( {type: "countdown", isCounting: true});
 <Timer seconds={seconds} minutes={minutes} timeLeftPercents={timeLeftPercents} />
 
