@@ -4,8 +4,22 @@ updates:
     directory: '/'
     schedule:
       interval: 'weekly'
-groups:
-  production-dependencies:
-    dependency-type: "production"
-  development-dependencies:
-    dependency-type: "development"
+    groups:
+      laverve:
+        applies-to: version-updates
+        patterns:
+          - "@laverve*"
+      storybook:
+        applies-to: version-updates
+        patterns:
+          - "@storybook*"
+      react:
+        applies-to: version-updates
+        patterns:
+          - "react*"
+          - "*react"
+          - "*react*"
+      uncategorized:
+        applies-to: version-updates
+        patterns:
+          - "*"
