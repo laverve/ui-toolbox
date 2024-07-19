@@ -1,5 +1,6 @@
 {
     "author": "Victor Pishuk <victor.pishuk@gmail.com>",
+    "type": "module",
     "bugs": {
         "url": "https://github.com/laverve/ui-toolbox/issues"
     },
@@ -35,7 +36,7 @@
         "url": "https://github.com/laverve/ui-toolbox/"
     },
     "scripts": {
-        "lint": "eslint --ext .js,.ts,.tsx,.json .",
+        "lint": "eslint .",
         "lint:staged": "lint-staged",
         "test": "jest --passWithNoTests",
         "build": "tsc"

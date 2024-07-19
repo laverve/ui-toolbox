@@ -5,6 +5,10 @@ updates:
     schedule:
       interval: 'weekly'
     groups:
+      uncategorized:
+        applies-to: version-updates
+        patterns:
+          - "*"
       laverve:
         applies-to: version-updates
         patterns:
@@ -13,13 +17,13 @@ updates:
         applies-to: version-updates
         patterns:
           - "@storybook*"
+          - "storybook*"
+        update-types:
+          - "minor"
+          - "patch"
       react:
         applies-to: version-updates
         patterns:
           - "react*"
           - "*react"
           - "*react*"
-      uncategorized:
-        applies-to: version-updates
-        patterns:
-          - "*"
