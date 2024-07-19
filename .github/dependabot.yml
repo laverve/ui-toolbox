@@ -13,17 +13,12 @@ updates:
         applies-to: version-updates
         patterns:
           - "@laverve*"
-      storybook:
-        applies-to: version-updates
-        patterns:
-          - "@storybook*"
-          - "storybook*"
-        update-types:
-          - "minor"
-          - "patch"
       react:
         applies-to: version-updates
         patterns:
           - "react*"
           - "*react"
           - "*react*"
+    ignore:
+      - dependency-name: "@storybook/*"
+      - dependency-name: "storybook"
