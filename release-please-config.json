@@ -6,6 +6,7 @@
             "bump-patch-for-minor-pre-major": false,
             "changelog-path": "CHANGELOG.md",
             "draft": false,
+            "extra-files": ["apps/apps-storybook/package.json"],
             "prerelease": false,
             "release-type": "node"
         },
