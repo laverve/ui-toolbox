@@ -73,7 +73,7 @@ jobs:
             - uses: googleapis/release-please-action@v4
               id: release
               with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
     Publish-NPM-Packages:
         needs: [Release-Please]
