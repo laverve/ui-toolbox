@@ -42,5 +42,5 @@
         "lint:staged": "lint-staged",
         "start:dev": "sb dev --port 9000"
     },
-    "version": "2.0.15"
+    "version": "2.0.16"
 }

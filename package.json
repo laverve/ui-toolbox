@@ -47,7 +47,7 @@
         "test": "lerna run test",
         "test:staged": "lerna run test --since=origin/main"
     },
-    "version": "1.0.0",
+    "version": "2.0.16",
     "workspaces": [
         "packages/components/*",
         "apps/*"

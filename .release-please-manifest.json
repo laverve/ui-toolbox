@@ -1,4 +1,4 @@
 {
-    ".": "2.0.15",
-    "packages/components/timer": "2.0.15"
+    ".": "2.0.16",
+    "packages/components/timer": "3.0.0"
 }
