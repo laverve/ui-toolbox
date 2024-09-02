@@ -5,7 +5,7 @@
         "url": "https://github.com/laverve/fusion/issues"
     },
     "dependencies": {
-        "@laverve/timer": "^2.0.15",
+        "@laverve/timer": "^3.0.0",
         "react": "^18.2.0"
     },
     "description": "Component documentation via Storybook",
@@ -42,5 +42,5 @@
         "lint:staged": "lint-staged",
         "start:dev": "sb dev --port 9000"
     },
-    "version": "2.0.15"
+    "version": "1.0.0"
 }
