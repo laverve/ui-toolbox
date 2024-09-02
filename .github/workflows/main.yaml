@@ -66,7 +66,7 @@ jobs:
         concurrency: Draft-Release
 
         outputs:
-            release_created: ${{ steps.release.outputs['packages/my-module--release_created'] }}
+            release_created: ${{ steps.release.outputs['packages/components/timer--release_created'] }}
 
         steps:
             - uses: actions/checkout@v4
