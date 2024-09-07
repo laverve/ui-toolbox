@@ -81,7 +81,7 @@ jobs:
 
         concurrency: Publish-NPM-Packages
 
-        if: ${{ needs.Release-Please.outputs.wordsearch_release_created || needs.Release-Please.outputs.maze_release_created }}
+        if: ${{ needs.Release-Please.outputs.timer_release_created }}
 
         steps:
             - uses: actions/checkout@v4
