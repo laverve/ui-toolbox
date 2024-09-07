@@ -3,11 +3,13 @@
     "packages": {
         ".": {
             "changelog-path": "CHANGELOG.md",
-            "release-type": "node"
+            "release-type": "node",
+            "skip-github-release": true
         },
         "apps/apps-storybook": {
             "changelog-path": "CHANGELOG.md",
-            "release-type": "node"
+            "release-type": "node",
+            "skip-github-release": true
         },
         "packages/components/timer": {
             "changelog-path": "CHANGELOG.md",

@@ -11,7 +11,6 @@ permissions:
     pull-requests: write
 
 env:
-    TARGET_ENVIRONMENT: production
     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -66,7 +65,7 @@ jobs:
         concurrency: Draft-Release
 
         outputs:
-            release_created: ${{ steps.release.outputs['packages/components/timer--release_created'] }}
+            timer_release_created: ${{ steps.release.outputs['packages/components/timer--release_created'] }}
 
         steps:
             - uses: actions/checkout@v4
@@ -82,7 +81,7 @@ jobs:
 
         concurrency: Publish-NPM-Packages
 
-        if: ${{ needs.Release-Please.outputs.release_created }}
+        if: ${{ needs.Release-Please.outputs.wordsearch_release_created || needs.Release-Please.outputs.maze_release_created }}
 
         steps:
             - uses: actions/checkout@v4
@@ -94,11 +93,14 @@ jobs:
             - uses: ./.github/actions/install
             - uses: ./.github/actions/build
             - uses: ./.github/actions/publish
+              if: ${{ needs.Release-Please.outputs.timer_release_created }}
+              with:
+                  package: packages/components/timer
 
     Publish-GH-Pages:
         needs: [Release-Please]
 
-        if: ${{ needs.Release-Please.outputs.release_created }}
+        if: ${{ needs.Release-Please.outputs.timer_release_created }}
 
         runs-on: ubuntu-latest
 

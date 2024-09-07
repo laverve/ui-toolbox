@@ -38,6 +38,8 @@
     },
     "scripts": {
         "build": "sb build -o ../../.ghpages-artifact/storybook",
+        "build:dev": "echo 'Done'",
+        "test": "echo 'Done'",
         "lint": "eslint .",
         "lint:staged": "lint-staged",
         "start:dev": "sb dev --port 9000"
