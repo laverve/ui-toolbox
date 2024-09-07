@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 type TimerType = "countup" | "countdown";
 
@@ -51,7 +51,7 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
     }, [timeout, type, setStartTime, setEndTime, setLocalTimeout]);
 
     useEffect(() => {
-        setTimer(calculateTimerState(type, startTime, timeout));
+        setTimer(calculateTimerState(type, startTime, localTimeout));
     }, [localTimeout, setTimer]);
 
     useEffect(() => {
@@ -67,10 +67,6 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
             onTimeOut?.();
         }
     }, [timeLeft, type, onTimeOut]);
-
-    // useEffect(() => {
-    //     computeTimer();
-    // }, [computeTimer]);
 
     useEffect(() => {
         if (!localIsCounting) {
@@ -88,8 +84,23 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
         };
     }, [startTime, timeout, type, setTimer, localIsCounting]);
 
+    const reset = useCallback(() => {
+        setStartTime(null);
+        setEndTime(null);
+        setTimer(calculateTimerState(type, null, localTimeout));
+    }, [setStartTime, setEndTime, type, localTimeout]);
+
     return useMemo(
-        () => ({ timeLeft, minutes, seconds, timeLeftPercents, startTime, endTime, isCounting: localIsCounting }),
-        [timeLeft, minutes, seconds, timeLeftPercents, startTime, endTime, localIsCounting]
+        () => ({
+            timeLeft,
+            minutes,
+            seconds,
+            timeLeftPercents,
+            startTime,
+            endTime,
+            isCounting: localIsCounting,
+            reset
+        }),
+        [timeLeft, minutes, seconds, timeLeftPercents, startTime, endTime, localIsCounting, reset]
     );
 };
