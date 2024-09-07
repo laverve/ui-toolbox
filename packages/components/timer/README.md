@@ -128,6 +128,7 @@ The hook return an object that you can use to determine timer's state and pass t
     startTime: <number | null>, // indicates a time when timer was started
     endTime: <number | null>, // indicates a time when timer was stopped
     isCounting: <boolean> // shows if the timer is running right now
+    reset: () => void // resets timer to initial state
 }
 ```
 
