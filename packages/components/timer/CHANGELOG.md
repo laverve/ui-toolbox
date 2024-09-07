@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.0](https://github.com/laverve/ui-toolbox/compare/timer-v3.0.1...timer-v3.1.0) (2024-09-07)
+
+
+### Features
+
+* **timer:** adds reset method ([095d356](https://github.com/laverve/ui-toolbox/commit/095d3562a263caf25c1dbb92817a0ec6c90f686b))
+
+
+### Bug Fixes
+
+* adds readme doc for reset function ([5f5d707](https://github.com/laverve/ui-toolbox/commit/5f5d707e894a761aceaeb427147b42c49f7c067b))
+
 ## [3.0.1](https://github.com/laverve/ui-toolbox/compare/timer-v3.0.0...timer-v3.0.1) (2024-09-07)
 
 

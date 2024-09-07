@@ -1,5 +1,5 @@
 {
     ".": "3.0.1",
-    "packages/components/timer": "3.0.1",
-    "apps/apps-storybook": "2.0.0"
+    "packages/components/timer": "3.1.0",
+    "apps/apps-storybook": "3.0.0"
 }
