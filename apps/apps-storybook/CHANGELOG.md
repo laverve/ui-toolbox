@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/laverve/ui-toolbox/compare/storybook-v1.0.0...storybook-v1.0.1) (2024-09-07)
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @laverve/timer bumped from ^3.0.0 to ^3.0.1
+
 ## 1.0.0 (2024-09-02)
 
 

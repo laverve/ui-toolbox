@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.17](https://github.com/laverve/ui-toolbox/compare/laverve-monorepo-v2.0.16...laverve-monorepo-v2.0.17) (2024-09-07)
+
+
+### Bug Fixes
+
+* **timer:** reset timer if type or timeout were changed ([#20](https://github.com/laverve/ui-toolbox/issues/20)) ([a411dfd](https://github.com/laverve/ui-toolbox/commit/a411dfd2112a0513ee3cde8e952e38f7cc92611a))
+
 ## [2.0.16](https://github.com/laverve/ui-toolbox/compare/laverve-monorepo-v2.0.15...laverve-monorepo-v2.0.16) (2024-09-02)
 
 

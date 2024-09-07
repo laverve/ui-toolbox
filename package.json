@@ -46,7 +46,7 @@
         "test": "npm run test --workspaces",
         "test:staged": "npm run test --workspaces"
     },
-    "version": "2.0.16",
+    "version": "2.0.17",
     "workspaces": [
         "packages/components/*",
         "apps/*"
