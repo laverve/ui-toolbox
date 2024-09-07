@@ -14,6 +14,10 @@
         "packages/components/timer": {
             "changelog-path": "CHANGELOG.md",
             "release-type": "node"
+        },
+        "packages/components/use-parent-size": {
+            "changelog-path": "CHANGELOG.md",
+            "release-type": "node"
         }
     },
     "plugins": [
