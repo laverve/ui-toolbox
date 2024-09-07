@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type TimerType = "countup" | "countdown";
 
@@ -31,21 +31,28 @@ const calculateTimerState = (type: TimerType, startTime: number | null, timeout:
 };
 
 export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, onTimeOut }: UseTimerOptions) => {
+    const [localTimeout, setLocalTimeout] = useState(timeout);
     const [{ seconds, minutes, timeLeft, timeLeftPercents }, setTimer] = useState(
-        calculateTimerState(type, null, timeout)
+        calculateTimerState(type, null, localTimeout)
     );
 
     const [startTime, setStartTime] = useState<number | null>(isCounting ? Date.now() : null);
     const [endTime, setEndTime] = useState<number | null>(null);
     const [localIsCounting, setIsCounting] = useState(isCounting);
 
-    const computeTimer = useCallback(() => {
-        setTimer(calculateTimerState(type, startTime, timeout));
-    }, [startTime, timeout, type, setTimer, localIsCounting]);
-
     useEffect(() => {
         setIsCounting(isCounting);
     }, [isCounting]);
+
+    useEffect(() => {
+        setStartTime(null);
+        setEndTime(null);
+        setLocalTimeout(timeout);
+    }, [timeout, type, setStartTime, setEndTime, setLocalTimeout]);
+
+    useEffect(() => {
+        setTimer(calculateTimerState(type, startTime, timeout));
+    }, [localTimeout, setTimer]);
 
     useEffect(() => {
         if (localIsCounting && !startTime) {
@@ -61,21 +68,25 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
         }
     }, [timeLeft, type, onTimeOut]);
 
-    useEffect(() => {
-        computeTimer();
-    }, [computeTimer]);
+    // useEffect(() => {
+    //     computeTimer();
+    // }, [computeTimer]);
 
     useEffect(() => {
         if (!localIsCounting) {
             return () => {};
         }
 
+        const computeTimer = () => {
+            setTimer(calculateTimerState(type, startTime, timeout));
+        };
+
         const interval = setInterval(computeTimer, 1000);
 
         return () => {
             clearInterval(interval);
         };
-    }, [computeTimer]);
+    }, [startTime, timeout, type, setTimer, localIsCounting]);
 
     return useMemo(
         () => ({ timeLeft, minutes, seconds, timeLeftPercents, startTime, endTime, isCounting: localIsCounting }),
