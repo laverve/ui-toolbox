@@ -40,6 +40,7 @@
         "lint:staged": "lint-staged",
         "test": "echo 'Fixme'",
         "build": "rimraf ./dist && tsc",
+        "build:packages": "rimraf ./dist && tsc",
         "build:dev": "tsc"
     },
     "version": "3.1.0",

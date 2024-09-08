@@ -39,6 +39,7 @@
     "scripts": {
         "build": "sb build -o ../../.ghpages-artifact/storybook",
         "build:dev": "echo 'Done'",
+        "build:packages": "echo 'Done'",
         "test": "echo 'Done'",
         "lint": "eslint .",
         "lint:staged": "lint-staged",
