@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.1](https://github.com/laverve/ui-toolbox/compare/timer-v3.1.0...timer-v3.1.1) (2024-09-08)
+
+
+### Bug Fixes
+
+* **timer:** make timer 100% height ([47ecf4e](https://github.com/laverve/ui-toolbox/commit/47ecf4e71af5a7881d9bc7e290c207db98bc9a85))
+
 ## [3.1.0](https://github.com/laverve/ui-toolbox/compare/timer-v3.0.1...timer-v3.1.0) (2024-09-07)
 
 
