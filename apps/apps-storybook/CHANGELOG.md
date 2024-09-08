@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.0](https://github.com/laverve/ui-toolbox/compare/storybook-v4.0.0...storybook-v5.0.0) (2024-09-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* first available for public use version
+
+### Bug Fixes
+
+* breaking change ([a6f87f3](https://github.com/laverve/ui-toolbox/commit/a6f87f3a879e45a59b48a66b2a5de57217642fb7))
+
+
+### Dependencies
+
+* The following workspace dependencies were updated
+  * dependencies
+    * @laverve/timer bumped from ^3.1.0 to ^3.1.1
+
 ## [4.0.0](https://github.com/laverve/ui-toolbox/compare/storybook-v3.0.0...storybook-v4.0.0) (2024-09-07)
 
 
