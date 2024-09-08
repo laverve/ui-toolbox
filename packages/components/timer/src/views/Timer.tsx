@@ -32,7 +32,7 @@ const UnstyledTimer: React.FC<TimerProps> = ({
 
     return (
         <div className={className}>
-            <svg viewBox="-50 -50 100 100" strokeWidth="10" style={{ gridColumn: 1, gridRow: 1 }}>
+            <svg viewBox="-50 -50 100 100" strokeWidth="10" style={{ gridColumn: 1, gridRow: 1, height: "100%" }}>
                 <circle r="45" fill="none" stroke={mergedCircleStyle.defaultColor} />
                 {timeLeftPercents && (
                     <circle
