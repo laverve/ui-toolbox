@@ -22,7 +22,7 @@
         "@storybook/preset-create-react-app": "^7.4.1",
         "@storybook/react-webpack5": "^7.4.1",
         "@storybook/theming": "^7.4.1",
-        "@types/react": "^18.3.6",
+        "@types/react": "^18.3.8",
         "react": "^18.2.0",
         "storybook-a11y-report": "^0.0.21"
     },
