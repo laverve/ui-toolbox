@@ -43,7 +43,7 @@
     ],
     "license": "UNLICENSED",
     "main": "index.js",
-    "name": "laverve-monorepo",
+    "name": "monorepo",
     "repository": {
         "type": "git",
         "url": "https://github.com/laverve/ui-toolbox.git"
