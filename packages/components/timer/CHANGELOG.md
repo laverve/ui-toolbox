@@ -3,6 +3,13 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.1.2](https://github.com/laverve/ui-toolbox/compare/timer-v3.1.1...timer-v3.1.2) (2024-10-20)
+
+
+### Bug Fixes
+
+* **timer:** allows timer to be paused ([375b26f](https://github.com/laverve/ui-toolbox/commit/375b26f3448c6c07f4054080ebb86bfcaaa9d59f))
+
 ## [3.1.1](https://github.com/laverve/ui-toolbox/compare/timer-v3.1.0...timer-v3.1.1) (2024-09-08)
 
 
