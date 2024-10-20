@@ -4,17 +4,15 @@
     "bugs": {
         "url": "https://github.com/laverve/ui-toolbox/issues"
     },
-    "dependencies": {
-        "styled-components": "^6.1.11"
-    },
     "peerDependencies": {
         "react": "^18.2.0"
     },
-    "description": "This module offers a Timer component.",
+    "description": "This module offers a small but usefull hook that allows users to monitor size of a parent element.",
     "keywords": [
         "components",
         "react",
-        "timer"
+        "hook",
+        "useParentSize"
     ],
     "license": "MIT",
     "main": "./dist/src/index.js",
@@ -27,7 +25,7 @@
         "README.md",
         "LICENSE"
     ],
-    "name": "@laverve/timer",
+    "name": "@laverve/use-parent-size",
     "publishConfig": {
         "access": "public"
     },
@@ -40,9 +38,8 @@
         "lint:staged": "lint-staged",
         "test": "echo 'Fixme'",
         "build": "rimraf ./dist && tsc",
-        "build:packages": "rimraf ./dist && tsc",
-        "build:dev": "tsc"
+        "build:dev": "tsc -w"
     },
-    "version": "3.1.2",
+    "version": "1.0.0",
     "webpack": "./src/index.ts"
 }

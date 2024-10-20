@@ -6,7 +6,7 @@ module.exports = {
         "@storybook/addon-a11y",
         "@storybook/addon-styling-webpack"
     ],
-    staticDirs: ["../static"],
+    staticDirs: ["../stories/static"],
     framework: "@storybook/react-webpack5",
     babel: (config) => {
         config.presets.push([

@@ -3,7 +3,7 @@
         "rootDir": "./"
     },
     "exclude": ["./**/*.png", "./**/*.gif", "./**/*.css", "./**/*.svg", "./**/*.jpeg"],
-    "extends": "../../../tsconfig.eslint.json",
+    "extends": "../../tsconfig.eslint.json",
     "include": [
         "./.eslintrc.js",
         "./*.js",

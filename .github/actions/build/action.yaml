@@ -1,12 +1,12 @@
-name: 'Build'
-description: 'Builds all apps and components'
+name: "Build"
+description: "Builds all apps and components"
 inputs:
-  NODE_ENV:
-    description: 'Target env we are going to build assets'
-    required: true
-    default: 'production'
+    NODE_ENV:
+        description: "Target env we are going to build assets"
+        required: true
+        default: "production"
 runs:
-  using: "composite"
-  steps:
-    - run: NODE_ENV=${{ inputs.NODE_ENV }} npm run build:packages --workspaces
-      shell: bash
+    using: "composite"
+    steps:
+        - run: NODE_ENV=${{ inputs.NODE_ENV }} npm run build --workspaces
+          shell: bash

@@ -19,7 +19,10 @@
     "exclude": ["**/*.test.ts", "**/*.stub.ts", "node_modules", "dist"],
     "references": [
         {
-            "path": "./packages/components/timer"
+            "path": "./packages/timer"
+        },
+        {
+            "path": "./packages/use-parent-size"
         }
     ]
 }

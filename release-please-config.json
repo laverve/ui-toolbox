@@ -3,19 +3,13 @@
     "packages": {
         ".": {
             "changelog-path": "CHANGELOG.md",
-            "release-type": "node",
-            "skip-github-release": true
+            "release-type": "node"
         },
-        "apps/apps-storybook": {
-            "changelog-path": "CHANGELOG.md",
-            "release-type": "node",
-            "skip-github-release": true
-        },
-        "packages/components/timer": {
+        "packages/timer": {
             "changelog-path": "CHANGELOG.md",
             "release-type": "node"
         },
-        "packages/components/use-parent-size": {
+        "packages/use-parent-size": {
             "changelog-path": "CHANGELOG.md",
             "release-type": "node"
         }

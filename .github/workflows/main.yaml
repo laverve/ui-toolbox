@@ -39,8 +39,8 @@ jobs:
         concurrency: Draft-Release
 
         outputs:
-            timer_release_created: ${{ steps.release.outputs['packages/components/timer--release_created'] }}
-            use_parent_size_release_created: ${{ steps.release.outputs['packages/components/use-parent-size--release_created'] }}
+            timer_release_created: ${{ steps.release.outputs['packages/timer--release_created'] }}
+            use_parent_size_release_created: ${{ steps.release.outputs['packages/use-parent-size--release_created'] }}
 
         steps:
             - uses: actions/checkout@v4
@@ -70,11 +70,11 @@ jobs:
             - uses: ./.github/actions/publish
               if: ${{ needs.Release-Please.outputs.timer_release_created }}
               with:
-                  package: packages/components/timer
+                  package: packages/timer
             - uses: ./.github/actions/publish
               if: ${{ needs.Release-Please.outputs.use_parent_size_release_created }}
               with:
-                  package: packages/components/use-parent-size
+                  package: packages/use-parent-size
 
     Publish-GH-Pages:
         needs: [Release-Please]

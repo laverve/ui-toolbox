@@ -3,6 +3,6 @@
         "outDir": "./dist/"
     },
     "exclude": ["src/**/*.spec.ts", "src/**/*.spec.tsx"],
-    "extends": "../../../tsconfig.build.json",
+    "extends": "../../tsconfig.build.json",
     "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
