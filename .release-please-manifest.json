@@ -1,5 +1,5 @@
 {
     ".": "3.0.1",
-    "packages/timer": "3.1.2",
-    "packages/use-parent-size": "1.0.0"
+    "packages/timer": "4.0.0",
+    "packages/use-parent-size": "2.0.0"
 }
