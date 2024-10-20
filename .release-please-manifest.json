@@ -1,6 +1,6 @@
 {
     ".": "3.0.1",
-    "packages/components/timer": "3.1.1",
-    "apps/apps-storybook": "6.0.0",
+    "packages/components/timer": "3.1.2",
+    "apps/apps-storybook": "7.0.0",
     "packages/components/use-parent-size": "1.0.0"
 }
