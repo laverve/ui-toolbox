@@ -1,5 +1,7 @@
 {
     ".": "3.0.1",
     "packages/components/timer": "3.1.2",
-    "packages/components/use-parent-size": "1.0.0"
+    "packages/components/use-parent-size": "1.0.0",
+    "packages/timer": "1.0.0",
+    "packages/use-parent-size": "1.0.0"
 }
