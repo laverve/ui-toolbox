@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/laverve/ui-toolbox/compare/monorepo-v3.0.1...monorepo-v3.0.1) (2024-10-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* first available for public use version
+* fixes deploy gh pages script ([#2](https://github.com/laverve/ui-toolbox/issues/2))
+
+### Features
+
+* **timer:** adds reset method ([095d356](https://github.com/laverve/ui-toolbox/commit/095d3562a263caf25c1dbb92817a0ec6c90f686b))
+* **useParentSize:** adds useParentSize hook ([c090d93](https://github.com/laverve/ui-toolbox/commit/c090d93329cd8110fb29807c317e9eed001b3a25))
+
+
+### Bug Fixes
+
+* adds readme doc for reset function ([5f5d707](https://github.com/laverve/ui-toolbox/commit/5f5d707e894a761aceaeb427147b42c49f7c067b))
+* breaking change ([a6f87f3](https://github.com/laverve/ui-toolbox/commit/a6f87f3a879e45a59b48a66b2a5de57217642fb7))
+* do not reset timer start and end time when stopping counting ([f7e173c](https://github.com/laverve/ui-toolbox/commit/f7e173cf5326e3afb537014810fceff3465a44f8))
+* fixes deploy gh pages script ([#2](https://github.com/laverve/ui-toolbox/issues/2)) ([951a870](https://github.com/laverve/ui-toolbox/commit/951a870b6fdad83fd61a2a5dd0ad1ca4e21cf378))
+* fixes package-lock.json ([2854e78](https://github.com/laverve/ui-toolbox/commit/2854e781e9188f14699922854b57f042dd2a1a46))
+* fixes pipeline ([4ced108](https://github.com/laverve/ui-toolbox/commit/4ced1082eb7d44e958c9ea2ec3863bb8fd70fcac))
+* fixes styles ([c96b880](https://github.com/laverve/ui-toolbox/commit/c96b88020b9176af56f20681482c34fcf7689d54))
+* improves timer's state calculation ([7776f4d](https://github.com/laverve/ui-toolbox/commit/7776f4d57cc2eaa31acc9e2acc952d044b7065ea))
+* **timer:** allows timer to be paused ([375b26f](https://github.com/laverve/ui-toolbox/commit/375b26f3448c6c07f4054080ebb86bfcaaa9d59f))
+* **timer:** make timer 100% height ([47ecf4e](https://github.com/laverve/ui-toolbox/commit/47ecf4e71af5a7881d9bc7e290c207db98bc9a85))
+* **timer:** reset timer if type or timeout were changed ([#20](https://github.com/laverve/ui-toolbox/issues/20)) ([a411dfd](https://github.com/laverve/ui-toolbox/commit/a411dfd2112a0513ee3cde8e952e38f7cc92611a))
+* upgrades manifest ([c436308](https://github.com/laverve/ui-toolbox/commit/c436308ec9d5080f1ff2a2dc38868b8a5815b5c7))
+
+
+### Miscellaneous Chores
+
+* switch to moduleResolution=Node ([#16](https://github.com/laverve/ui-toolbox/issues/16)) ([5634c9f](https://github.com/laverve/ui-toolbox/commit/5634c9fe65dbfb58b35e4e59fe431d4799c0039e))
+
 ## [3.0.1](https://github.com/laverve/ui-toolbox/compare/laverve-monorepo-v3.0.1...laverve-monorepo-v3.0.1) (2024-10-20)
 
 
