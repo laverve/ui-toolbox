@@ -9,8 +9,16 @@ export type UseTimerOptions = {
     onTimeOut?: () => void;
 };
 
-const calculateTimerState = (type: TimerType, startTime: number | null, timeout: number) => {
-    const timeSpent = Math.round((Date.now() - (startTime || Date.now())) / 1000);
+type CalculateTimerStateOptions = {
+    type: TimerType;
+    startTime: number | null;
+    pauseTime: number;
+    timeout: number;
+};
+
+const calculateTimerState = ({ type, startTime, pauseTime, timeout }: CalculateTimerStateOptions) => {
+    const timeSpent = Math.round((Date.now() - (startTime || Date.now()) - pauseTime) / 1000);
+
     if (type === "countup") {
         return {
             seconds: timeSpent % 60,
@@ -32,26 +40,32 @@ const calculateTimerState = (type: TimerType, startTime: number | null, timeout:
 
 export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, onTimeOut }: UseTimerOptions) => {
     const [localTimeout, setLocalTimeout] = useState(timeout);
-    const [{ seconds, minutes, timeLeft, timeLeftPercents }, setTimer] = useState(
-        calculateTimerState(type, null, localTimeout)
-    );
-
     const [startTime, setStartTime] = useState<number | null>(isCounting ? Date.now() : null);
     const [endTime, setEndTime] = useState<number | null>(null);
+    const [pauseTime, setPauseTime] = useState<number>(0);
+    const [lastPausedAt, setLastPausedAt] = useState<number | null>(0);
     const [localIsCounting, setIsCounting] = useState(isCounting);
+
+    const [{ seconds, minutes, timeLeft, timeLeftPercents }, setTimer] = useState(
+        calculateTimerState({ type, startTime, timeout: localTimeout, pauseTime })
+    );
 
     useEffect(() => {
         setIsCounting(isCounting);
+        if (startTime) {
+            if (!isCounting) {
+                setLastPausedAt(+new Date());
+            } else {
+                if (lastPausedAt !== null) {
+                    setPauseTime(+new Date() - lastPausedAt + pauseTime);
+                }
+                setLastPausedAt(null);
+            }
+        }
     }, [isCounting]);
 
     useEffect(() => {
-        setStartTime(null);
-        setEndTime(null);
-        setLocalTimeout(timeout);
-    }, [timeout, type, setStartTime, setEndTime, setLocalTimeout]);
-
-    useEffect(() => {
-        setTimer(calculateTimerState(type, startTime, localTimeout));
+        setTimer(calculateTimerState({ type, startTime, timeout: localTimeout, pauseTime }));
     }, [localTimeout, setTimer]);
 
     useEffect(() => {
@@ -74,7 +88,7 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
         }
 
         const computeTimer = () => {
-            setTimer(calculateTimerState(type, startTime, timeout));
+            setTimer(calculateTimerState({ type, startTime, timeout, pauseTime }));
         };
 
         const interval = setInterval(computeTimer, 1000);
@@ -82,13 +96,20 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
         return () => {
             clearInterval(interval);
         };
-    }, [startTime, timeout, type, setTimer, localIsCounting]);
+    }, [startTime, timeout, type, pauseTime, setTimer, localIsCounting]);
 
     const reset = useCallback(() => {
         setStartTime(null);
         setEndTime(null);
-        setTimer(calculateTimerState(type, null, localTimeout));
-    }, [setStartTime, setEndTime, type, localTimeout]);
+        setPauseTime(0);
+        setLastPausedAt(null);
+        setTimer(calculateTimerState({ type, startTime: null, timeout: localTimeout, pauseTime }));
+    }, [setStartTime, setEndTime, type, localTimeout, startTime, pauseTime]);
+
+    useEffect(() => {
+        reset();
+        setLocalTimeout(timeout);
+    }, [timeout, type]);
 
     return useMemo(
         () => ({
