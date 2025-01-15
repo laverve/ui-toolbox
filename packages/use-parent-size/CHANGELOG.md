@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.0.1](https://github.com/laverve/ui-toolbox/compare/use-parent-size-v2.0.0...use-parent-size-v4.0.1) (2025-01-15)
+
+
+### Miscellaneous Chores
+
+* release 4.0.1 ([7ccf574](https://github.com/laverve/ui-toolbox/commit/7ccf574d6ce3c8c4c77bfd258def5feebeea4b4b))
+
 ## [2.0.0](https://github.com/laverve/ui-toolbox/compare/use-parent-size-v1.0.0...use-parent-size-v2.0.0) (2024-10-20)
 
 
