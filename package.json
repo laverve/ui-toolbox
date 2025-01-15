@@ -5,37 +5,23 @@
         "url": "https://github.com/laverve/fusion/issues"
     },
     "dependencies": {
-        "react": "^18.2.0"
+        "react": "^19.0.0"
     },
     "description": "This is a monorepo for all the products/components laverve is offering",
     "devDependencies": {
-        "@babel/preset-typescript": "^7.26.0",
         "@laverve/eslint-utils": "^5.1.11",
         "@laverve/test-utils": "^5.1.11",
-        "@storybook/addon-a11y": "^7.4.1",
-        "@storybook/addon-essentials": "^7.4.1",
-        "@storybook/addon-links": "^7.4.1",
-        "@storybook/addon-storysource": "^7.4.1",
-        "@storybook/addon-styling-webpack": "^1.0.0",
-        "@storybook/api": "^7.4.1",
-        "@storybook/cli": "^7.4.1",
-        "@storybook/csf-plugin": "^7.4.1",
-        "@storybook/react-webpack5": "^7.4.1",
-        "@storybook/theming": "^7.4.1",
-        "@types/react": "^18.3.12",
+        "@types/react": "^19.0.7",
         "browserslist": "^4.24.2",
         "copyfiles": "^2.4.1",
         "husky": "^9.1.7",
         "lint-staged": "^15.1.0",
         "prettier": "^3.4.2",
         "rimraf": "^6.0.1",
-        "snapshot-diff": "^0.10.0",
         "ts-node": "^10.9.1",
-        "tsconfig-paths-webpack-plugin": "^4.2.0",
         "typescript": "^5.7.2",
         "yargs": "^17.7.2",
-        "react": "^18.2.0",
-        "storybook-a11y-report": "^0.0.21"
+        "react": "^19.0.0"
     },
     "homepage": "https://github.com/vpishuk/laverve#readme",
     "keywords": [
@@ -55,8 +41,6 @@
         "lint:fix": "eslint --fix && npm run lint --workspaces -- --fix",
         "lint:staged": "lint-staged && npm run lint:staged --since=origin/main --concurrency=1 --workspaces",
         "prepare": "husky install",
-        "storybook": "sb dev --port 9000",
-        "build:storybook": "sb build -o ./.ghpages-artifact/storybook",
         "test": "npm run test --workspaces",
         "test:staged": "npm run test --workspaces"
     },

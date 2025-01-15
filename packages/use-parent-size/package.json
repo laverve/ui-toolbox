@@ -5,7 +5,7 @@
         "url": "https://github.com/laverve/ui-toolbox/issues"
     },
     "peerDependencies": {
-        "react": "^18.2.0"
+        "react": "^19.0.0"
     },
     "description": "This module offers a small but usefull hook that allows users to monitor size of a parent element.",
     "keywords": [

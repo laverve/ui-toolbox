@@ -25,7 +25,6 @@ This monorepo contains configuration for VSCode editor. It doesn't mean that you
 2. To build monorepo use: `npm run build`
 3. To lint monorepo use: `npm run lint`
 4. To initialize pre-commit hooks use: `npm run prepare`
-5. To run storybook `npm run storybook`
 
 ## Workflow
 
