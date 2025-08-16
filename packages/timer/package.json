@@ -5,7 +5,7 @@
         "url": "https://github.com/laverve/ui-toolbox/issues"
     },
     "dependencies": {
-        "styled-components": "^6.1.18"
+        "styled-components": "^6.1.19"
     },
     "peerDependencies": {
         "react": "^19.0.0"
