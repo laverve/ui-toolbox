@@ -44,7 +44,7 @@
         "test": "npm run test --workspaces",
         "test:staged": "npm run test --workspaces"
     },
-    "version": "4.0.1",
+    "version": "4.0.2",
     "workspaces": [
         "packages/*"
     ]

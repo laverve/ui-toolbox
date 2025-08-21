@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [4.0.2](https://github.com/laverve/ui-toolbox/compare/monorepo-v4.0.1...monorepo-v4.0.2) (2025-08-21)
+
+
+### Bug Fixes
+
+* fixes lint issues ([abf4e8b](https://github.com/laverve/ui-toolbox/commit/abf4e8b004b7c3cc30adbdf337e6ab97daf6914a))
+* trigger build ([4292724](https://github.com/laverve/ui-toolbox/commit/4292724e92a5bc92fff833bfc0ac5f01560dee75))
+
+
+### Miscellaneous Chores
+
+* upgrade dependencies ([79d82fa](https://github.com/laverve/ui-toolbox/commit/79d82fab9b05c53a33aebf6c1a2135a01e7851a6))
+
 ## [4.0.1](https://github.com/laverve/ui-toolbox/compare/monorepo-v3.0.1...monorepo-v4.0.1) (2025-01-15)
 
 

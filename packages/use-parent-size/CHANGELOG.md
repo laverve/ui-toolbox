@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.0.2](https://github.com/laverve/ui-toolbox/compare/use-parent-size-v4.0.1...use-parent-size-v4.0.2) (2025-08-21)
+
+
+### Bug Fixes
+
+* fixes lint issues ([abf4e8b](https://github.com/laverve/ui-toolbox/commit/abf4e8b004b7c3cc30adbdf337e6ab97daf6914a))
+* trigger build ([4292724](https://github.com/laverve/ui-toolbox/commit/4292724e92a5bc92fff833bfc0ac5f01560dee75))
+
 ## [4.0.1](https://github.com/laverve/ui-toolbox/compare/use-parent-size-v2.0.0...use-parent-size-v4.0.1) (2025-01-15)
 
 
