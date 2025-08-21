@@ -11,6 +11,7 @@ export const useParentSize = () => {
         }
 
         const { width: w, height: h } = ref.current.getBoundingClientRect();
+
         if (w !== width) {
             setWidth(w);
         }

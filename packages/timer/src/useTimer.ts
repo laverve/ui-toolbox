@@ -59,6 +59,7 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
                 if (lastPausedAt !== null) {
                     setPauseTime(+new Date() - lastPausedAt + pauseTime);
                 }
+
                 setLastPausedAt(null);
             }
         }
