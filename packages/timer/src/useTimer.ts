@@ -63,11 +63,11 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
                 setLastPausedAt(null);
             }
         }
-    }, [isCounting]);
+    }, [isCounting, lastPausedAt, pauseTime, startTime]);
 
     useEffect(() => {
         setTimer(calculateTimerState({ type, startTime, timeout: localTimeout, pauseTime }));
-    }, [localTimeout, setTimer]);
+    }, [localTimeout, setTimer, pauseTime, startTime, type]);
 
     useEffect(() => {
         if (localIsCounting && !startTime) {
@@ -81,7 +81,7 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
             setEndTime(Date.now());
             onTimeOut?.();
         }
-    }, [timeLeft, type, onTimeOut]);
+    }, [timeLeft, type, onTimeOut, localIsCounting]);
 
     useEffect(() => {
         if (!localIsCounting) {
@@ -105,12 +105,12 @@ export const useTimer = ({ timeout = 0, type = "countup", isCounting = false, on
         setPauseTime(0);
         setLastPausedAt(null);
         setTimer(calculateTimerState({ type, startTime: null, timeout: localTimeout, pauseTime }));
-    }, [setStartTime, setEndTime, type, localTimeout, startTime, pauseTime]);
+    }, [setStartTime, setEndTime, type, localTimeout, pauseTime]);
 
     useEffect(() => {
         reset();
         setLocalTimeout(timeout);
-    }, [timeout, type]);
+    }, [timeout, type, reset]);
 
     return useMemo(
         () => ({

@@ -1,16 +1,20 @@
 {
-    "eslint.format.enable": true,
-    "prettier.enable": false,
-    "editor.formatOnSave": true,
-    "eslint.validate": ["javascript", "javascriptreact", "json", "jsonc", "json5"],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.useFlatConfig": true,
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "json", "jsonc", "json5"],
     "eslint.workingDirectories": [
         ".",
         {
-            "pattern": "./packages/*/*/"
-        },
-        {
-            "pattern": "./apps/*/"
+            "pattern": "./packages/*/"
         }
     ],
-    "jest.jestCommandLine": ""
+    "jest.jestCommandLine": "",
+    "jest.virtualFolders": [
+        { "name": "use-parent-size", "rootPath": "pacakges/use-parent-size" },
+        { "name": "timer", "rootPath": "pacakges/timer" }
+    ],
+    "prettier.enable": false,
+    "typescript.preferences.importModuleSpecifier": "relative"
 }

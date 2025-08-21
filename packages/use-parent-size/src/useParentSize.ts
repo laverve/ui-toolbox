@@ -5,12 +5,14 @@ export const useParentSize = () => {
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
 
+    const boundingClientRect = ref.current?.getBoundingClientRect();
+
     const measure = useCallback(() => {
-        if (!ref.current) {
+        if (!boundingClientRect) {
             return;
         }
 
-        const { width: w, height: h } = ref.current.getBoundingClientRect();
+        const { width: w, height: h } = boundingClientRect;
 
         if (w !== width) {
             setWidth(w);
@@ -18,11 +20,11 @@ export const useParentSize = () => {
         if (h !== height) {
             setHeight(h);
         }
-    }, [ref.current?.getBoundingClientRect(), width, height]);
+    }, [boundingClientRect, width, height]);
 
     useEffect(() => {
         measure();
-    }, [ref.current, height, width]);
+    }, [height, width, measure]);
 
     useEffect(() => {
         const onResize = () => {
@@ -32,7 +34,7 @@ export const useParentSize = () => {
         window.addEventListener("resize", onResize);
 
         return () => window.removeEventListener("resize", onResize);
-    }, [ref.current, measure, width, height]);
+    }, [measure, width, height]);
 
     return { ref, width, height };
 };
