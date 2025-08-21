@@ -12,7 +12,7 @@
         "@laverve/eslint-utils": "^5.3.7",
         "@laverve/test-utils": "^5.3.7",
         "@types/react": "^19.1.10",
-        "browserslist": "^4.25.2",
+        "browserslist": "^4.25.3",
         "copyfiles": "^2.4.1",
         "husky": "^9.1.7",
         "lint-staged": "^16.1.5",
