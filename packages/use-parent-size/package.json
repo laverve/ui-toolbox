@@ -40,6 +40,6 @@
         "build": "rimraf ./dist && tsc",
         "build:dev": "tsc -w"
     },
-    "version": "4.0.2",
+    "version": "4.0.3",
     "webpack": "./src/index.ts"
 }
