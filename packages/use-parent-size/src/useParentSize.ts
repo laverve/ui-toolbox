@@ -1,13 +1,12 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 export const useParentSize = () => {
     const ref = useRef<HTMLDivElement>(null);
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
 
-    const boundingClientRect = ref.current?.getBoundingClientRect();
-
     const measure = useCallback(() => {
+        const boundingClientRect = ref.current?.getBoundingClientRect();
         if (!boundingClientRect) {
             return;
         }
@@ -20,7 +19,7 @@ export const useParentSize = () => {
         if (h !== height) {
             setHeight(h);
         }
-    }, [boundingClientRect, width, height]);
+    }, [ref, width, height]);
 
     useEffect(() => {
         measure();
@@ -36,5 +35,5 @@ export const useParentSize = () => {
         return () => window.removeEventListener("resize", onResize);
     }, [measure, width, height]);
 
-    return { ref, width, height };
+    return useMemo(() => ({ ref, width, height }), [ref, width, height]);
 };
